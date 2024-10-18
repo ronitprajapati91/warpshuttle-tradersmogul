@@ -13,6 +13,9 @@ import androidx.navigation.compose.NavHost
 import com.warpshuttle.tradersmogul.navigation.Screen
 import com.warpshuttle.tradersmogul.navigation.customAnimatedComposable
 import com.warpshuttle.tradersmogul.navigation.rememberCustomAnimatedNavController
+import com.warpshuttle.tradersmogul.presentation.feature.authentication.screen.ChangePasswordScreen
+import com.warpshuttle.tradersmogul.presentation.feature.authentication.screen.EnterOtpScreen
+import com.warpshuttle.tradersmogul.presentation.feature.authentication.screen.ForgotPasswordScreen
 import com.warpshuttle.tradersmogul.presentation.feature.authentication.screen.SignInScreen
 import com.warpshuttle.tradersmogul.presentation.feature.authentication.screen.SignUpScreen
 import com.warpshuttle.tradersmogul.presentation.feature.splashscreen.SplashScreen
@@ -77,6 +80,29 @@ class MainActivity : ComponentActivity() {
                             clearBackStack = true
                         )
                     }) {
+
+                }
+            }
+
+            customAnimatedComposable(route = Screen.ForgotPassword.route){
+                ForgotPasswordScreen(phoneNumber = "", onPhoneNumberValueChange = {}) {
+
+                }
+            }
+
+            customAnimatedComposable(route = Screen.EnterOtp.route){
+                EnterOtpScreen(otpNumber = "", onOtpNumberValueChange = {}) {
+
+                }
+            }
+
+            customAnimatedComposable(route = Screen.ChangePassword.route){
+                ChangePasswordScreen(
+                    password = "",
+                    confirmPassword = "",
+                    onPasswordValueChange = {},
+                    onConfirmPasswordValueChange = {}
+                ) {
 
                 }
             }

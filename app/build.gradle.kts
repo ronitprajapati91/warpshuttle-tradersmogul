@@ -62,10 +62,22 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.core.splash.screen)
     implementation(libs.androidx.appcompat)
+    implementation(libs.andoridx.datastore)
 
     implementation(libs.accompanist.systemuicontroller)
     implementation(libs.accompanist.navigation.material)
     implementation(libs.accompanist.navigation.animation)
+
+    implementation(libs.retrofit.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.retrofit.kotlin.coroutines)
+
+    implementation(libs.facebook.stetho)
+    implementation(libs.facebook.okhttp)
+
+    implementation(libs.squareup.okhttp)
+    implementation(libs.squareup.okhttp.logging.interceptor)
+    implementation(libs.androidx.constraintlayout.compose.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
